@@ -23,6 +23,7 @@ public class z2{
         int large = -101;
         int row = 0;
         int col = 0;
+        int total = 0;
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
                 if (t[i][j] > largest) {
@@ -38,12 +39,16 @@ public class z2{
                 if (j % 2 != 0) {
                     col += t[i][j];
                 }
+                if (i * j > t[i][j]) {
+                    total += 1;
+                }
                 System.out.print(t[i][j]+" ");
             }
             System.out.print("\n"); 
         }
 
-        System.out.println("largest:" + largest + " 2nd large: " + large); 
-        System.out.println(row + " " + col); 
+        System.out.println("1st largest " + largest + " | 2nd largest " + large); 
+        System.out.println("row values: " + row + " | column values: " + col); 
+        System.out.println("3rd thingy: " + total); 
     }
 }
